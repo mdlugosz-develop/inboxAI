@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InboxAI - Gmail Viewer</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        .ai-analysis {
+            background: #f5f5f5;
+            padding: 15px;
+            margin-top: 15px;
+            border-radius: 5px;
+        }
+        .ai-analysis h3 {
+            margin-top: 0;
+            color: #333;
+        }
+        .ai-analysis-content {
+            white-space: pre-wrap;
+        }
+        .analyze-button {
+            background: #4285f4;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .analyze-button:hover {
+            background: #3367d6;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>InboxAI Gmail Viewer</h1>
+            <div id="auth-status">
+                <span id="status-text">Not authenticated</span>
+                <button id="auth-button" class="button">Login with Gmail</button>
+            </div>
+        </header>
+
+        <main>
+            <div id="loading" class="hidden">
+                <div class="loader"></div>
+                <p>Loading emails...</p>
+            </div>
+
+            <div id="email-list" class="hidden">
+                <h2>Recent Emails</h2>
+                <div class="emails-container"></div>
+            </div>
+
+            <div id="error-message" class="hidden">
+                <p class="error"></p>
+            </div>
+        </main>
+    </div>
+    <script src="/js/app.js"></script>
+</body>
+</html> 
